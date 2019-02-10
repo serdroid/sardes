@@ -6,6 +6,12 @@ repositories {
     jcenter()
 }
 
+if (project.hasProperty("tomcat")) {
+	war {
+	    archiveName = "${rootProject.name}##${version}.war"
+	}
+}
+
 dependencies {
     compileOnly group: 'javax.enterprise', name: 'cdi-api', version: '1.2'
     compileOnly group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
