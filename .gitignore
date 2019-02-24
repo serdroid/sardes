@@ -1,6 +1,4 @@
 .gradle
-gradle
-gradlew*
 .metadata
 build
 .classpath
